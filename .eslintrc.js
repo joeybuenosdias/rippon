@@ -22,7 +22,7 @@ module.exports = {
                 "prettier",
             ],
             rules: {
-                "@typescript-eslint/comma-dangle": ["error"],
+                // "@typescript-eslint/comma-dangle": ["error"],
                 "@typescript-eslint/explicit-function-return-type": ["error"]
             }
         }
