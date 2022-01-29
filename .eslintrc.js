@@ -16,10 +16,15 @@ module.exports = {
             files: ["*.ts", "*.tsx"],
             extends: [
                 "plugin:react/recommended",
+                // https://typescript-eslint.io/rules/
                 "plugin:@typescript-eslint/recommended",
                 "plugin:@typescript-eslint/recommended-requiring-type-checking",
-                "prettier"
+                "prettier",
             ],
+            rules: {
+                "@typescript-eslint/comma-dangle": ["error"],
+                "@typescript-eslint/explicit-function-return-type": ["error"]
+            }
         }
     ],
     rules: {
