@@ -6,5 +6,6 @@ module.exports = {
     bracketSpacing: true,
     bracketSameLine: false,
     arrowParens: "always",
-	htmlWhitespaceSensitivity: "strict"
+	htmlWhitespaceSensitivity: "strict",
+    useTabs: true,
 };

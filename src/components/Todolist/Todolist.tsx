@@ -14,22 +14,22 @@ type Todo = {
   completed: boolean;
 };
 
-type Todolist = {
+type TodoList = {
   list: Todo[];
 };
 
-const defaultTodolist = {
+const defaultTodoList = {
   list: [],
 };
 
-const TodolistContext = createContext<Todolist>(defaultTodolist);
+const TodoListContext = createContext<TodoList>(defaultTodoList);
 
-export function useTodolist(): Todolist {
-  return useContext(TodolistContext);
+export function useTodoList(): TodoList {
+  return useContext(TodoListContext);
 }
 
-export default function Todolist(): ReactElement {
-  const [todolist, setTodolist] = useState<Todo[]>([]);
+export default function TodoList(): ReactElement {
+  const [todoList, setTodoList] = useState<Todo[]>([]);
 
   useEffect(() => {
     const newList = [
@@ -44,20 +44,20 @@ export default function Todolist(): ReactElement {
         completed: false,
       },
     ];
-    setTodolist(newList);
+    setTodoList(newList);
   }, []);
 
   const value = useMemo(() => {
     return {
-      list: todolist,
+      list: todoList,
     };
-  }, [todolist]);
+  }, [todoList]);
 
   return (
-    <TodolistContext.Provider value={value}>
+    <TodoListContext.Provider value={value}>
       <div>
         <List />
       </div>
-    </TodolistContext.Provider>
+    </TodoListContext.Provider>
   );
 }

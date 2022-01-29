@@ -1,9 +1,9 @@
 import React from "react";
 import type { ReactElement } from "react";
-import { useTodolist } from "..";
+import { useTodoList } from "..";
 
 export default function List(): ReactElement {
-  const { list } = useTodolist();
+  const { list } = useTodoList();
   return (
     <ul>
       {list.map((item) => {
