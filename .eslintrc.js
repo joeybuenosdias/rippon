@@ -25,6 +25,13 @@ module.exports = {
                 // "@typescript-eslint/comma-dangle": ["error"],
                 "@typescript-eslint/explicit-function-return-type": ["error"]
             }
+        },
+        {
+            files: ["*.test.ts", "*.test.tsx"],
+            env: {
+                jest: true,
+                node: true,
+            }
         }
     ],
     rules: {
