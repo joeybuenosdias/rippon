@@ -7,8 +7,8 @@
     "start": "webpack serve --open --mode development",
     "build": "npm run prettier:check && npm run lint && webpack --mode production",
     "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
-    "prettier": "npx prettier --write src/**/*.{ts,tsx} src/index.tsx",
-    "prettier:check": "npx prettier --check src/**/*.{ts,tsx}",
+    "prettier": "npx prettier --write src",
+    "prettier:check": "npx prettier --check src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
