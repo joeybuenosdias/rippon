@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "lib": ["DOM", "ESNext"],
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
@@ -11,7 +12,12 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react"
+        "jsx": "react",
+        "paths": {
+            "~/*": [
+                "./src/*"
+            ]
+        }
     },
     "include": ["src"]
 }
