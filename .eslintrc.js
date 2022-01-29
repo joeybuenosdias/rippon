@@ -4,7 +4,7 @@ module.exports = {
         ecmaVersion: "latest",
         sourceType: "module",
         tsconfigRootDir: __dirname,
-        project: ['./tsconfig.json'],
+        project: ["./tsconfig.json"],
     },
     plugins: [
         "@typescript-eslint",
@@ -13,11 +13,12 @@ module.exports = {
     // https://stackoverflow.com/questions/58510287/parseroptions-project-has-been-set-for-typescript-eslint-parser/64488474#64488474
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
+            files: ["*.ts", "*.tsx"],
             extends: [
                 "plugin:react/recommended",
                 "plugin:@typescript-eslint/recommended",
-                'plugin:@typescript-eslint/recommended-requiring-type-checking'
+                "plugin:@typescript-eslint/recommended-requiring-type-checking",
+                "prettier"
             ],
         }
     ],
@@ -31,5 +32,6 @@ module.exports = {
             "pragma": "React",
             "version": "detect"
         }
-    }
+    },
+    ignorePatterns: [".eslintrc.js"]
 }
